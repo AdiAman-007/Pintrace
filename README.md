@@ -19,3 +19,15 @@ building the finished product.
 
 2. Manufacturer dashboard
 ![2. Manufacturer dashboard](screenshots/2%20Manufacturer%20dashboard.PNG)
+
+3. Create Part Order
+![3. Create Part Order](screenshots/3%20Create%20Part%20Order.png)
+
+4. View Part order
+![4. View Part order](screenshots/4%20View%20Part%20order.png)
+
+5. Suplier Dashboard
+![5. Suplier Dashboard](screenshots/5%20Suplier%20Dashboard.png)
+
+6. Create Package
+![6. Create Package](screenshots/6%20Create%20Package.png)
