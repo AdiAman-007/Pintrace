@@ -31,3 +31,15 @@ building the finished product.
 
 6. Create Package
 ![6. Create Package](screenshots/6%20Create%20Package.png)
+
+7. Create Shipment
+![7. Create Shipment](screenshots/7%20Create%20Shipment.png)
+
+8. Confirm Delivery
+![8. Confirm Delivery](screenshots/8%20Confirm%20Delivery.png)
+
+9. Create Finished Goods
+![9. Create Finished Goods](screenshots/9%20Create%20Finished%20Goods.png)
+
+10. View Finished Goods
+![10. View Finished Goods](screenshots/10%20View%20Finished%20Goods.png)
