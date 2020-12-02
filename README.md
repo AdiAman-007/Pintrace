@@ -15,4 +15,4 @@ building the finished product.
 
 ## SCREENSHOTS
 1. Login 
-![Login page](/screenshots/1 Login.PNG)
+[Login page](https://github.com/AdiAman-007/Pintrace/blob/dev/screenshots/1%20Login.PNG)
