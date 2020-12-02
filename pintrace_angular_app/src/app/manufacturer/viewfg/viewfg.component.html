@@ -1,0 +1,57 @@
+<div class="page">
+    <div class="form-container col-lg-11 mx-auto">
+        <div name="product-details">
+            <div class="title row">
+                <h4 class="col-lg-8 col-sm-3 coll-md-8" style="float: left;">Product Details</h4>      
+            </div>
+            <div class="content row">
+                <div class="form-group col-lg-3">
+                    <label class="bold">Product id</label><br/>
+                    <label>{{productdata.productid}}</label>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label class="bold">Product code</label><br/>
+                    <label>{{productdata.productcode}}</label>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label class="bold">Product name</label><br/>
+                    <label>{{productdata.productname}}</label>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label class="bold">Dimensions</label><br/>
+                    <label>{{productdata.dimensions}}</label>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label class="bold">Weight</label><br/>
+                    <label>{{productdata.weight}}</label>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label class="bold">Manufacturing date</label><br/>
+                    <label>{{productdata.manufacturedate}}</label>
+                </div>
+            </div>
+        </div>
+        <div name="part-details">
+            <div class="title">
+                <h4>Part Details</h4>
+            </div>
+            <div class="content row">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Part</th>
+                            <th>Quanity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of productdata.partList">
+                            <td>{{data.part}}</td>
+                            <td>{{data.quantity}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

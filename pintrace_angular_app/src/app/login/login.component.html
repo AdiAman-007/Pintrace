@@ -1,0 +1,25 @@
+<div id="container">
+    <div class="mx-auto col-lg-3 col-md-6 col-sm-3 login-form">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-container">
+                <div id="title">
+                    <h1 class="display-2">Pintrace</h1>
+                    <h4>Track parts during their entire lifecycle</h4>
+                </div>
+                <div class="form-group userid">
+                    <label for="User Id">User Id</label>
+                    <input type="text" formControlName="userid" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" formControlName="password" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button [disabled]="loginForm.invalid" class="btn btn-primary">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

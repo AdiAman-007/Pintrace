@@ -1,0 +1,66 @@
+<div class="page">
+    <div class="form-container col-lg-11 mx-auto">
+        <div name="product-details">
+            <div class="title row">
+                <h4 class="col-lg-8 col-sm-3 coll-md-8" style="float: left;">Product Details</h4>
+                <!-- <a class="col-lg col-sm refresh col-md" style="float: right;" (click)="resetForm()"><i class="fas fa-redo-alt"></i></a>         -->
+            </div>
+            <div class="content row">
+                <div class="form-group col-lg-3">
+                    <label for="Product code" class="bold">Product code</label>
+                    <select  class="form-control" [formControl]="prductCode">
+                        <option></option>
+                        <option *ngFor="let code of productCodeList;">{{code}}</option>
+                    </select>
+                </div>
+                <div class="col-lg">
+                    <label for="add"></label><br/>
+                    <button class="btn btn-primary col-lg-2" (click)="importTemplate()">Import template</button>
+                </div>
+            </div>
+            <div class="content row">
+                <div class="form-group col-lg-3" *ngIf="proudctTemplate">
+                    <label class="bold">Product name</label><br/>
+                    <label>{{proudctTemplate.productname}}</label>
+                </div>
+                <div class="form-group col-lg-3" *ngIf="proudctTemplate">
+                    <label class="bold">Prouduct dimension</label><br/>
+                    <label>{{proudctTemplate.dimensions}}</label>
+                </div>
+                <div class="form-group col-lg-3" *ngIf="proudctTemplate">
+                    <label class="bold">Product weight</label><br/>
+                    <label>{{proudctTemplate.weight}}</label>
+                </div>
+            </div>
+        </div>
+        <div name="part-details" *ngIf="proudctTemplate">
+            <div class="title row">
+                <h4 class="col-lg-8 col-sm-3 coll-md-8" style="float: left;">Part Details</h4>
+            </div>
+            <div class="content row">
+                <table class="table table-sm col-lg">
+                    <thead>
+                        <tr>
+                            <td>Part name</td>
+                            <td>Quanity</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let parts of proudctTemplate.partList">
+                            <td>{{parts.part}}</td>
+                            <td>{{parts.quantity}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div name="submit" *ngIf="proudctTemplate">
+            <div class="content row submit">
+                <div class="form-group col-lg-12">
+                    <button class="btn btn-primary submit-btn" (click)=createFG()>Create FG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

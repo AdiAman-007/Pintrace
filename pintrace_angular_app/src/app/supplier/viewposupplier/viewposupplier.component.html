@@ -1,0 +1,113 @@
+<div class="page">
+    <div class="form-container col-lg-11 mx-auto">
+        <div name="order-details">
+            <div class="title row">
+                <h4 class="col-lg-8 col-sm-3 coll-md-8" style="float: left;">Order Details</h4>      
+            </div>
+            <div class="content row">
+                <div class="form-group col-lg-3">
+                    <label class="bold">Order id</label><br/>
+                    <label>{{podata._id}}</label>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label class="bold">Order date</label><br/>
+                    <label>{{podata.orderdate}}</label>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label class="bold">Deliver date</label><br/>
+                    <label>{{podata.deliverdate}}</label>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label class="bold">Delivery location</label><br/>
+                    <label>{{podata.deliverlocation}}</label>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label class="bold">Supplier</label><br/>
+                    <label>{{podata.supplier}}</label>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label class="bold">Status</label><br/>
+                    <label>{{podata.status}}</label>
+                </div>
+            </div>
+        </div>
+        <div name="part-details">
+            <div class="title">
+                <h4>Part Details</h4>
+            </div>
+            <div class="content row">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Part</th>
+                            <th>Quanity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of podata.partlist">
+                            <td>{{data.partname}}</td>
+                            <td>{{data.quantity}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div name="pin-details" *ngIf="pinarray">
+            <div class="title">
+                <h4>Pin Details</h4>
+            </div>
+            <div class="content row">
+                <div class="col-lg pin-table">
+                    <table class="table table-sm ">
+                        <thead>
+                            <tr>
+                                <th>Pin</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let items of pinarray">
+                                <td (click)="showPartDetails(items._id)">{{items._id}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg" *ngIf="selectedPart">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Part details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pin: {{selectedPart._id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Part name: {{selectedPart.part}}</td>
+                            </tr>
+                            <tr>
+                                <td>Dimensions: {{selectedPart.dimension}}</td>
+                            </tr>
+                            <tr>
+                                <td>Weight: {{selectedPart.weight}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg">
+                    <qr-code [value]=selectedPart._id size="200"></qr-code>
+                </div>
+            </div>
+            
+        </div>
+        <div name="confirm">
+            <div class="content row submit">
+                <div class="form-group col-lg-12">
+                    <button *ngIf="podata.status=='packed'" class="btn btn-primary submit-btn" (click)="createShipment()" [disabled]="podata.status!='packed'">Create Shipment</button>
+                    <button *ngIf="podata.status=='confirmed'" class="btn btn-primary submit-btn" (click)="createPackage()" [disabled]="podata.status!='confirmed'">Create Package</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

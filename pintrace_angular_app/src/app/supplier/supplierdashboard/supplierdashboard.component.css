@@ -1,0 +1,74 @@
+.section{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px rgba(50, 50, 50, 0.2);
+    padding-bottom: 40px;
+}
+#hero{
+    height: 400px;
+}
+#figures{
+    margin-top: 10px;
+    height: 140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px rgba(50, 50, 50, 0.2);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.icon{
+    font-size: 60px;
+    text-shadow: 0px 0px 3px rgba(20, 20, 20, 0.8);
+}
+.fig-content{
+    padding-left: 10px;
+    text-align: left;
+    margin-left: 10px;
+    line-height: 2px;
+}
+.blue{
+    color: #1C7CD5;
+}
+.purple{
+    color: #6771DC;
+}
+.pink{
+    color: #A367DC;
+}
+.fig-text{
+    font-weight: bolder;
+}
+.fig-title{
+    color: #555555;
+    font-weight: bolder;
+}
+.order-table{
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px rgba(50, 50, 50, 0.2);
+    padding-bottom: 20px;
+    margin-bottom: 120px;
+    height: auto;
+}
+.table-feature{
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+}
+.dash-table{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.table{
+    overflow-y: scroll;
+}
+.form-control{
+    height: calc(1em + .75rem + 2px);
+    padding: .25rem .5rem;
+}

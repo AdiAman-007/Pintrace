@@ -1,0 +1,24 @@
+#cotainer{
+    height: 100%;
+    color: white;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+#title{
+    text-align: center;
+    margin-top: 20%;
+    color: #1C7CD5;
+}
+.display-2{
+    font-weight: bolder !important;
+}
+.userid{
+    margin-top: 35%;
+}
+.btn-primary{
+    width: 100% !important;
+}
+.loader{
+    text-align: center;
+    color: #1C7CD5;
+}

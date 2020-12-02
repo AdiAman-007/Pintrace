@@ -1,0 +1,97 @@
+<div class="page">
+    <div class="form-container col-lg-11 mx-auto">
+        <div name="order-details">
+            <div class="title row">
+                <h4 class="col-lg-8 col-sm-3 coll-md-8" style="float: left;">Order Details</h4>
+                <a class="col-lg col-sm refresh col-md" style="float: right;" (click)="resetForm()"><i class="fas fa-redo-alt"></i></a>        
+            </div>
+            <div class="content row" [formGroup]="poHeader">
+                <div class="form-group col-lg-3">
+                    <label for="Order date">Order date</label>
+                    <input type="date" class="form-control" formControlName="orderdate"/>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label for="Delivery location">Delivery location</label>
+                    <select  class="form-control" formControlName="deliverlocation">
+                        <option></option>
+                        <option *ngFor="let loc of locationList;">{{loc}}</option>
+                    </select>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label for="Supplier">Supplier</label>
+                    <select class="form-control" formControlName="supplier">
+                        <option></option>
+                        <option *ngFor="let sup of supplierList;">{{sup}}</option>
+                    </select>
+                </div>
+                <div class="col-lg-3">
+                    <label for="add"></label><br/>
+                    <button class="btn btn-primary col-lg-3" (click)="savePoHeader()" [disabled]="poHeader.invalid">Save</button>
+                </div>
+            </div>
+        </div>
+        <div name="part-details">
+            <div class="title">
+                <h4>Part Details</h4>
+            </div>
+            <div class="content row" [formGroup]="part">
+                <div class="form-group col-lg-3">
+                    <label for="Select part">Select part</label>
+                    <select class="custom-select" class="form-control" formControlName="partname">
+                        <option></option>
+                        <option *ngFor="let part of partList;">{{part}}</option>
+                    </select>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label for="Quantity">Quantity</label>
+                    <input type="number" class="form-control" formControlName="quantity"/>
+                </div>
+                <div class="col-lg-3">
+                    <label for="add"></label><br/>
+                    <button class="btn btn-primary col-lg-3" (click)="addPart()" [disabled]="part.invalid || poHeader.invalid">Add</button>
+                </div>
+            </div>
+        </div>
+        <div name="order-preview" >
+            <div class="title">
+                <h4>Order Preview</h4>
+            </div>
+            <div class="col-lg-9 row" style="box-shadow: 0px 0px 5px 1px rgba(50, 50, 50, 0.2); border-radius: 5px; padding-top: 15px; margin-left: 5px;">
+                    <div class="col-lg-6">
+                        <ul>
+                            <li><label class="bold">Manufacturer : </label> {{payload.manufacturer | uppercase}}</li>
+                            <li><label class="bold">Supplier : </label> {{payload.supplier | uppercase}}</li>
+                            <li><label class="bold">Order date : </label> {{payload.orderdate}}</li>
+                            <li><label class="bold">Delivery location : </label> {{payload.deliverlocation | uppercase}}</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <table class="table table-hover table-sm">
+                            <thead>
+                              <tr>
+                                <th></th>
+                                <th scope="col">Part Name</th>
+                                <th scope="col">Quantity</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let part of cart" >
+                                <td (click)="trashPart(part)" class="trash"><i class="far fa-trash-alt"></i></td>
+                                <td>{{part.partname}}</td>
+                                <td>{{part.quantity}}</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        </div>
+        <div name="submit">
+            <div class="content row submit">
+                <div class="form-group col-lg-12">
+                    <button class="btn btn-primary submit-btn" (click)="createPO()" [disabled]="isEmpty(cart)">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
