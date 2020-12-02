@@ -14,5 +14,32 @@ availability of the parts.
 building the finished product.
 
 ## SCREENSHOTS
-1. Login 
-![Login page](/screenshots/1 Login.PNG)
+1. Login page
+![1. Login page](screenshots/1%20Login.PNG)
+
+2. Manufacturer dashboard
+![2. Manufacturer dashboard](screenshots/2%20Manufacturer%20dashboard.PNG)
+
+3. Create Part Order
+![3. Create Part Order](screenshots/3%20Create%20Part%20Order.png)
+
+4. View Part order
+![4. View Part order](screenshots/4%20View%20Part%20order.png)
+
+5. Suplier Dashboard
+![5. Suplier Dashboard](screenshots/5%20Suplier%20Dashboard.png)
+
+6. Create Package
+![6. Create Package](screenshots/6%20Create%20Package.png)
+
+7. Create Shipment
+![7. Create Shipment](screenshots/7%20Create%20Shipment.png)
+
+8. Confirm Delivery
+![8. Confirm Delivery](screenshots/8%20Confirm%20Delivery.png)
+
+9. Create Finished Goods
+![9. Create Finished Goods](screenshots/9%20Create%20Finished%20Goods.png)
+
+10. View Finished Goods
+![10. View Finished Goods](screenshots/10%20View%20Finished%20Goods.png)
