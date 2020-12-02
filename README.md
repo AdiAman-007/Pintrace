@@ -14,4 +14,4 @@ availability of the parts.
 building the finished product.
 
 ## SCREENSHOTS
-[1. Login page]:/screenshots/1%20Login.PNG
+[1. Login page]: screenshots/1%20Login.PNG
