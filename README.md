@@ -15,4 +15,4 @@ building the finished product.
 
 ## SCREENSHOTS
 1. Login 
-![Login page](/screenshots/1 Login.png)
+![Login page](/screenshots/1 Login.PNG)
