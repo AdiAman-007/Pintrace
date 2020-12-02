@@ -13,5 +13,6 @@ availability of the parts.
 * Once, the manufacturer received the parts from the supplier, they can proceed on
 building the finished product.
 
+## SCREENSHOTS
 1. Login 
 ![Login page](/screenshots/1 Login.png)
